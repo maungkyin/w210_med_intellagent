@@ -168,7 +168,7 @@ Overall Score = (
     0.20 × Faithfulness +
     0.15 × Answer Quality +
     0.15 × RAGAS +
-    0.25 × LLM Judge         # New!
+    0.25 × LLM Judge         
 )
 ```
 
