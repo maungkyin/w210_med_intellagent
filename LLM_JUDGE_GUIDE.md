@@ -1,4 +1,4 @@
-# 🤖 LLM-as-a-Judge Evaluation Guide
+#  LLM-as-a-Judge Evaluation Guide
 
 ## Overview
 
@@ -31,25 +31,25 @@ Traditional metrics like BLEU, ROUGE, or even RAGAS have limitations:
 │    • Context (data retrieved)                               │
 │    • SQL Query (optional)                                   │
 │                                                             │
-│  ┌───────────────────────────────────────────────────────┐ │
-│  │           GPT-4o-mini Evaluation                      │ │
-│  │                                                       │ │
-│  │  Criteria (0-10 scale each):                         │ │
-│  │  ├─ Accuracy (factual correctness)                   │ │
-│  │  ├─ Completeness (answers full question)             │ │
-│  │  ├─ Clarity (patient-friendly language)              │ │
-│  │  ├─ Relevance (stays on topic)                       │ │
-│  │  ├─ Medical Appropriateness (professional tone)      │ │
-│  │  └─ Data Grounding (based on actual data)            │ │
-│  │                                                       │ │
-│  │  Output (JSON):                                       │ │
-│  │  ├─ Individual scores (0-10 each)                    │ │
-│  │  ├─ Overall score (0-10 average)                     │ │
-│  │  ├─ Verdict (EXCELLENT/GOOD/ACCEPTABLE/POOR/FAIL)    │ │
-│  │  ├─ Strengths (what works well)                      │ │
-│  │  ├─ Weaknesses (what needs improvement)              │ │
-│  │  └─ Suggestions (actionable improvements)            │ │
-│  └───────────────────────────────────────────────────────┘ │
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │           GPT-4o-mini Evaluation                      │  │
+│  │                                                       │  │
+│  │  Criteria (0-10 scale each):                          │  │
+│  │  ├─ Accuracy (factual correctness)                    │  │
+│  │  ├─ Completeness (answers full question)              │  │
+│  │  ├─ Clarity (patient-friendly language)               │  │
+│  │  ├─ Relevance (stays on topic)                        │  │
+│  │  ├─ Medical Appropriateness (professional tone)       │  │
+│  │  └─ Data Grounding (based on actual data)             │  │
+│  │                                                       │  │
+│  │  Output (JSON):                                       │  │
+│  │  ├─ Individual scores (0-10 each)                     │  │
+│  │  ├─ Overall score (0-10 average)                      │  │
+│  │  ├─ Verdict (EXCELLENT/GOOD/ACCEPTABLE/POOR/FAIL)     │  │
+│  │  ├─ Strengths (what works well)                       │  │
+│  │  ├─ Weaknesses (what needs improvement)               │  │
+│  │  └─ Suggestions (actionable improvements)             │  │
+│  └───────────────────────────────────────────────────────┘  │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -375,12 +375,6 @@ print(f"Average Score: {results['aggregate']['average_scores']['overall']}")
 
 ## Troubleshooting
 
-### Issue: "OpenAI API error"
-**Solution**: 
-- Check OPENAI_API_KEY is set
-- Verify API quota/billing
-- Check internet connection
-
 ### Issue: "Inconsistent scores"
 **Solution**:
 - Use lower temperature (0.1-0.3)
@@ -404,10 +398,10 @@ print(f"Average Score: {results['aggregate']['average_scores']['overall']}")
 ```bash
 $ python test_llm_judge.py
 
-🚀 Starting LLM Judge Tests
+ Starting LLM Judge Tests
 
 ================================================================================
-🤖 Testing LLM-as-a-Judge Evaluation
+ Testing LLM-as-a-Judge Evaluation
 ================================================================================
 
 Test Case 1: High-Quality Answer
@@ -468,7 +462,7 @@ Test Case 2: Poor Answer (Hallucination)
 }
 
 ================================================================================
-✅ All LLM Judge tests completed!
+ All LLM Judge tests completed!
 ================================================================================
 ```
 
