@@ -193,23 +193,20 @@ Our production system runs on **AWS EC2** (t2.medium, 4GB RAM) with **RDS Postgr
 # - Instance Type: t2.medium (4GB RAM)
 # - Security Group: Allow ports 22 (SSH), 8000 (FastAPI)
 
-# 2. SSH into EC2
-ssh -i aws/UCB.pem ec2-user@3.92.27.68
-
-# 3. Run automated setup
+# 2. Run automated setup
 git clone https://github.com/maungkyin/w210_med_intellagent.git
 cd w210_med_intellagent
 chmod +x aws_setup.sh
 ./aws_setup.sh
 
-# 4. Configure environment
+# 3. Configure environment
 cp .env.example .env
 nano .env  # Add your API keys and RDS endpoint
 
-# 5. Load database (RDS)
+# 4. Load database (RDS)
 psql -h your-rds-endpoint.rds.amazonaws.com -U postgres -d medical_rag -f sql-vectorstore_210/synthea_ehr_backup.sql
 
-# 6. Start server
+# 5. Start server
 ./restart_fastapi_aws.sh
 ```
 
@@ -717,14 +714,14 @@ psql -d medical_rag -c "CREATE INDEX IF NOT EXISTS idx_patients_id ON patients(i
 
 ### Upcoming Features
 
-**Q1 2025**:
+**Q1 2026**:
 - [ ] Multi-patient comparison queries
 - [ ] Clinical decision support integration
 - [ ] Real-time monitoring dashboard
 - [ ] Docker Compose deployment
 - [ ] Kubernetes manifests
 
-**Q2 2025**:
+**Q2 2026**:
 - [ ] FHIR R4 API compatibility
 - [ ] HL7 message processing
 - [ ] Voice query interface (Whisper integration)
@@ -743,8 +740,8 @@ psql -d medical_rag -c "CREATE INDEX IF NOT EXISTS idx_patients_id ON patients(i
 ## 👥 Team
 
 **UC Berkeley School of Information - MIDS Capstone Project (W210)**
-
-- **Maung Kyin** - Project Lead, Backend Developer
+- **Vishal Saxena** - Project Manager, Frontend Developer
+- **Maung Kyin** - Project Team Member, Backend Developer
 - Collaborators welcome! See [Contributing](#-contributing)
 
 **Advisors**:
