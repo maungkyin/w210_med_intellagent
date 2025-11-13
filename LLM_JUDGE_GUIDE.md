@@ -190,7 +190,7 @@ Overall Score = (
    ├─ Custom Faithfulness (data accuracy)
    ├─ Custom Answer Quality (completeness, clarity)
    ├─ RAGAS Metrics (RAG-specific)
-   └─ LLM Judge (comprehensive quality)    ← New!
+   └─ LLM Judge (comprehensive quality)    
    ↓
 4. Aggregate Scores → Overall Score + Detailed Report
 ```
