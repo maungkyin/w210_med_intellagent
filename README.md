@@ -611,7 +611,7 @@ mypy .
 ### Synthetic EHR Data (Synthea)
 
 We use [Synthea](https://synthetichealth.github.io/synthea/) to generate realistic synthetic patient data:
-- **Patients**: 100 synthetic patients
+- **Patients**: 111 synthetic patients
 - **Encounters**: 5,000+ clinical encounters
 - **Conditions**: 2,000+ diagnosed conditions
 - **Medications**: 3,000+ prescriptions
